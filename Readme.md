@@ -15,8 +15,9 @@ $ node ./index.js -u INSERT_YOUR_URL
 
 <details><summary>Output example</summary>
 <p>
-```bash
-node ./index.js -u https://github.com
+
+```
+$ node ./index.js -u https://github.com
 ```
 
 ```json
