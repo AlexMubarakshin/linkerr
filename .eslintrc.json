@@ -28,6 +28,7 @@
         ],
         "no-unused-vars": "warn",
         "no-console":"off",
-        "no-var": "warn"
+        "no-var": "warn",
+        "no-extra-boolean-cast": "off"
     }
 }
