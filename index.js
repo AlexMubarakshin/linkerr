@@ -1,6 +1,8 @@
 const program = require("commander");
 const ora = require("ora");
 
+const path = require("path");
+
 const { parse } = require("./lib/parse");
 const { saveFile } = require("./lib/file-system");
 const { getCurrentDate } = require("./lib/time");
@@ -26,7 +28,7 @@ const main = async () => {
             try {
                 const info = await parse(formatedURL);
                 const siteName = URL_UTILS.splitURL(formatedURL).authority;
-                const infoPath = __dirname + "/parsed-data";
+                const infoPath = path.join(__dirname , "/parsed-data");
                 const fileName = siteName + "_" + getCurrentDate() + ".json";
 
                 await saveFile(infoPath, fileName, JSON.stringify(info));
