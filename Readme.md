@@ -1,95 +1,106 @@
-# Simple site parser
+# Linkerr 📝
 
-Simple site parser</br>
 Parse hrefs, image paths, scripts paths and links from site.
 
-## Usage:
-```
-$ node ./index.js -u INSERT_YOUR_URL
+## Usage
+
+```bash
+node ./index.js -u INSERT_YOUR_URL
 ```
 
-### Json with the results will be at `/project-folder/parsed-data`
+```bash
+Usage: index [options]
 
+Options:
+  -V, --version               output the version number
+  -u, --url [Site URL*]       Site URL
+  -o, --output [Output path]  Output path
+  -f, --fileName [File name]  File name
+  -h, --help                  output usage information
+```
 
 ## Output example
 
-<details><summary>Output example</summary>
-<p>
 
-```
-$ node ./index.js -u https://github.com
+
+```bash
+node ./index.js -u https://github.com
 ```
 
 ```json
 {
+    "url": "https://github.com",
     "hrefs": [
-        "#start-of-content",
+        "https://github.com#start-of-content",
         "https://github.com/",
-        "/join?source=header-home",
-        "/features",
-        "/features/code-review/",
-        "/features/project-management/",
-        "/features/integrations",
-        "/features/actions",
-        "/features#team-management",
-        "/features#social-coding",
-        "/features#documentation",
-        "/features#code-hosting",
-        "/case-studies",
-        "/security",
-        "/enterprise",
-        "/explore",
-        "/topics",
-        "/collections",
-        "/trending",
+        "https://github.com/join?source=header-home",
+        "https://github.com/features",
+        "https://github.com/features/code-review/",
+        "https://github.com/features/project-management/",
+        "https://github.com/features/integrations",
+        "https://github.com/features/actions",
+        "https://github.com/features/package-registry",
+        "https://github.com/features#team-management",
+        "https://github.com/features#social-coding",
+        "https://github.com/features#documentation",
+        "https://github.com/features#code-hosting",
+        "https://github.com/customer-stories",
+        "https://github.com/security",
+        "https://github.com/enterprise",
+        "https://github.com/explore",
+        "https://github.com/topics",
+        "https://github.com/collections",
+        "https://github.com/trending",
         "https://lab.github.com/",
         "https://opensource.guide",
-        "/events",
+        "https://github.com/events",
         "https://github.community",
         "https://education.github.com",
-        "/marketplace",
-        "/pricing",
-        "/pricing#feature-comparison",
+        "https://github.com/marketplace",
+        "https://github.com/pricing",
+        "https://github.com/pricing#feature-comparison",
         "https://enterprise.github.com/contact",
-        "/nonprofit",
+        "https://github.com/nonprofit",
         "https://education.github.com",
-        "/login",
-        "/join?source=header-home",
-        "/open-source",
-        "/business",
+        "https://github.com/login",
+        "https://github.com/join?source=header-home",
+        "https://github.com/open-source",
+        "https://github.com/business",
         "https://help.github.com/articles/creating-a-strong-password",
         "https://help.github.com/terms",
         "https://help.github.com/privacy",
-        "/join?source=button-home",
+        "https://github.com/join?source=button-home",
         "https://enterprise.github.com/contact",
         "https://enterprise.github.com/trial",
-        "/join?plan=business&setup_organization=true&source=business-page",
-        "/features/code-review",
-        "/features/project-management",
-        "/features/integrations",
-        "/enterprise",
-        "/pricing",
+        "https://live-stream.github.com",
+        "https://github.com/join?plan=business&setup_organization=true&source=home",
+        "https://github.com/features/code-review",
+        "https://github.com/features/project-management",
+        "https://github.com/features/integrations",
+        "https://github.com/customer-stories/mgm-resorts",
+        "https://github.com/customer-stories/nationwide",
+        "https://github.com/customer-stories/sap",
+        "https://github.com/customer-stories/skyscanner",
+        "https://github.com/enterprise",
+        "https://github.com/pricing",
         "https://enterprise.github.com/contact",
-        "/features/integrations",
-        "/marketplace",
-        "/case-studies/ariya",
-        "/case-studies/freakboy3742",
-        "/case-studies/mailchimp",
-        "/case-studies/kris-nova",
-        "/case-studies/yyx990803",
-        "/case-studies/mapbox",
-        "/case-studies/jessfraz",
-        "/open-source",
-        "/personal",
-        "/business",
+        "https://github.com/features/integrations",
+        "https://github.com/marketplace",
+        "https://github.com/customer-stories/freakboy3742",
+        "https://github.com/customer-stories/kris-nova",
+        "https://github.com/customer-stories/yyx990803",
+        "https://github.com/customer-stories/jessfraz",
+        "https://github.com/open-source",
+        "https://github.com/personal",
+        "https://github.com/business",
         "https://help.github.com/terms",
         "https://help.github.com/privacy",
-        "/",
-        "/features",
-        "/security",
-        "/enterprise",
-        "/case-studies?type=customers",
-        "/pricing",
+        "https://github.com/",
+        "https://github.com/features",
+        "https://github.com/security",
+        "https://github.com/enterprise",
+        "https://github.com/customer-stories",
+        "https://github.com/pricing",
         "https://resources.github.com",
         "https://developer.github.com",
         "http://partner.github.com/",
@@ -103,16 +114,16 @@ $ node ./index.js -u https://github.com
         "https://github.com/contact",
         "https://github.com/about",
         "https://github.blog",
-        "/about/careers",
-        "/about/press",
+        "https://github.com/about/careers",
+        "https://github.com/about/press",
         "https://shop.github.com",
         "https://twitter.com/github",
         "https://www.facebook.com/GitHub",
         "https://www.youtube.com/github",
         "https://www.linkedin.com/company/github",
         "https://github.com/github",
-        "/site/terms",
-        "/site/privacy"
+        "https://github.com/site/terms",
+        "https://github.com/site/privacy"
     ],
     "imgs": [
         "https://github.githubassets.com/images/search-key-slash.svg",
@@ -139,19 +150,12 @@ $ node ./index.js -u https://github.com
         "https://github.githubassets.com/images/modules/site/integrators/atom.png",
         "https://github.githubassets.com/images/modules/site/integrators/circleci.png",
         "https://github.githubassets.com/images/modules/site/integrators/google.png",
-        "https://github.githubassets.com/images/modules/site/integrators/codeclimate.png",
-        "https://github.githubassets.com/images/modules/site/case-studies/hero/ariya.jpg",
-        "https://github.githubassets.com/images/modules/site/case-studies/hero/freakboy3742.jpg",
-        "https://github.githubassets.com/images/modules/site/case-studies/hero/mailchimp.jpg",
-        "https://github.githubassets.com/images/modules/site/case-studies/hero/kris-nova.jpg",
-        "https://github.githubassets.com/images/modules/site/case-studies/hero/yyx990803.jpg",
-        "https://github.githubassets.com/images/modules/site/case-studies/hero/mapbox.jpg",
-        "https://github.githubassets.com/images/modules/site/case-studies/hero/jessfraz.jpg"
+        "https://github.githubassets.com/images/modules/site/integrators/codeclimate.png"
     ],
     "scripts": [
-        "https://github.githubassets.com/assets/compat-6e5ed2648dae3be3f9358af5732a780f.js",
-        "https://github.githubassets.com/assets/frameworks-3e7d2f629dd4da27222360afe5729ef9.js",
-        "https://github.githubassets.com/assets/github-761c8fbdcb7323b48c687fa45c7761b5.js"
+        "https://github.githubassets.com/assets/compat-bootstrap-90c0ace0.js",
+        "https://github.githubassets.com/assets/frameworks-f1ce1e70.js",
+        "https://github.githubassets.com/assets/github-bootstrap-7892f842.js"
     ],
     "links": [
         "https://github.githubassets.com",
@@ -161,20 +165,17 @@ $ node ./index.js -u https://github.com
         "https://avatars3.githubusercontent.com",
         "https://github-cloud.s3.amazonaws.com",
         "https://user-images.githubusercontent.com/",
-        "https://github.githubassets.com/assets/frameworks-a3b8a10d4a9e37a78f033ef4a4f525f5.css",
-        "https://github.githubassets.com/assets/github-b5621ac7a31fa904b2627bcd0f6079bc.css",
-        "https://github.githubassets.com/assets/site-278e4176d194ae782983c71f1f767503.css",
-        "/opensearch.xml",
+        "https://github.githubassets.com/assets/frameworks-da88be2d386821a8fa8de15789a23d23.css",
+        "https://github.githubassets.com/assets/site-f26347f7a4c8de793412afd3a9311ad1.css",
+        "https://github.githubassets.com/assets/github-eabf00b055e24d7c72291a479ad33e5d.css",
+        "https://github.com/opensearch.xml",
         "https://github.com/fluidicon.png",
         "https://github.githubassets.com/",
-        "https://github.githubassets.com/assets/site-278e4176d194ae782983c71f1f767503.css",
+        "https://github.githubassets.com/assets/site-f26347f7a4c8de793412afd3a9311ad1.css",
         "https://github.com/",
         "https://github.githubassets.com/pinned-octocat.svg",
         "https://github.githubassets.com/favicon.ico",
-        "/manifest.json"
+        "https://github.com/manifest.json"
     ]
 }
 ```
-
-</p>
-</details>

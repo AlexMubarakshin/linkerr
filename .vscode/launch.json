@@ -7,12 +7,12 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceFolder}\\index.js",
+            "name": "Launch debug parser",
+            "program": "${workspaceFolder}//index.js",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ],
-            "args": ["-u", "github.com"]
+            "args": ["-u", "https://github.com"]
         }
     ]
 }
